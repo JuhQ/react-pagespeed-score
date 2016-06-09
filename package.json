@@ -1,0 +1,23 @@
+{
+  "name": "react-pagespeed-score",
+  "version": "0.1.0",
+  "description": "A React component for a dial-type chart of PageSpeed Insights.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cauealves/react-pagespeed-score.git"
+  },
+  "author": "Cauê Alves <cauealveseng@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cauealves/react-pagespeed-score/issues"
+  },
+  "homepage": "https://github.com/cauealves/react-pagespeed-score#readme",
+  "dependencies": {
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  }
+}
