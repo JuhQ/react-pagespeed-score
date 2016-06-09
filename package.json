@@ -10,7 +10,11 @@
     "type": "git",
     "url": "git+ssh://git@github.com/cauealves/react-pagespeed-score.git"
   },
-  "author": "Cauê Alves <cauealveseng@gmail.com>",
+  "author": {
+    "name": "Cauê Alves",
+    "email": "cauealveseng@gmail.com",
+    "url": "cauealves.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cauealves/react-pagespeed-score/issues"
