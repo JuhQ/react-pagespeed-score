@@ -5,7 +5,7 @@ import PageSpeedScore from './../../src/index';
 class Demo extends React.Component {
     render() {
       return (
-        <PageSpeedScore />
+        <PageSpeedScore url="http://cauealves.com/" />
       );
     }
 };
