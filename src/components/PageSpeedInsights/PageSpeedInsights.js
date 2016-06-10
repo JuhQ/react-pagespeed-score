@@ -8,6 +8,7 @@ import {
   CHART_API_URL 
 } from './PageSpeedInsightsConstants';
 
+import Loader from 'react-loader';
 
 export default class PageSpeedInsights extends Component {
 
@@ -23,7 +24,8 @@ export default class PageSpeedInsights extends Component {
     super(props);
 
     this.state = {
-      score: false
+      score: false,
+      loaded: false
     };
   }
 
@@ -62,7 +64,8 @@ export default class PageSpeedInsights extends Component {
     let data = JSON.parse(r);
 
     this.setState({
-      score: data.ruleGroups.SPEED.score
+      score: data.ruleGroups.SPEED.score,
+      loaded: true
     });
   }
 
@@ -80,13 +83,11 @@ export default class PageSpeedInsights extends Component {
   }
 
   render() {
-    if (false === this.state.score) {
-      return <div>Loading...</div>;
-    };
-
     return (
       <div className="chart">
-        <img src={this._getImageSrc(this.state.score)} />
+        <Loader loaded={this.state.loaded}>
+          <img src={this._getImageSrc(this.state.score)} />
+        </Loader>
       </div>
     );    
   }

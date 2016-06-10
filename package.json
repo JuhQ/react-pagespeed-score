@@ -23,7 +23,8 @@
   "homepage": "https://github.com/cauealves/react-pagespeed-score#readme",
   "dependencies": {
     "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "react-dom": "^15.1.0",
+    "react-loader": "^2.4.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",
