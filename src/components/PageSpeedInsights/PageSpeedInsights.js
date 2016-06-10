@@ -71,12 +71,12 @@ export default class PageSpeedInsights extends Component {
 
   _getImageSrc () {
     const query = [
-      'chtt=Page+Speed+score:+' + this.state.score,
-      'chs=300x200',
+      'chtt=PageSpeed+Score',
+      'chs=500x300',
       'cht=gom',
       'chd=t:' + this.state.score,
       'chxt=x,y',
-      'chxl=0:|' + this.state.score,
+      'chxl=0:|' + this.state.score + '|1:|improve it|gives pro spent|fast'
     ].join('&');
 
     return CHART_API_URL + query;
