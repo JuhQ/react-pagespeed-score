@@ -8,7 +8,7 @@ let config = require('./webpack.dev.config');
 
 
 new webpackDevServer(webpack(config), {
-  contentBase: './demo/src',
+  contentBase: './demo',
   hot: true,
   debug: true
 }).listen(8080, 'localhost', (error) => {
