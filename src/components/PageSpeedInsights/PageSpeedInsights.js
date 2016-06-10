@@ -1,11 +1,11 @@
-import React, { 
-  Component, 
-  PropTypes 
+import React, {
+  Component,
+  PropTypes
 } from 'react';
 
-import { 
-  API_URL, 
-  CHART_API_URL 
+import {
+  API_URL,
+  CHART_API_URL
 } from './PageSpeedInsightsConstants';
 
 import Loader from 'react-loader';
@@ -14,11 +14,11 @@ export default class PageSpeedInsights extends Component {
 
   static propTypes = {
     url: PropTypes.string.isRequired
-  };
+  }
 
   static defaultProps = {
     url: location.origin
-  };
+  }
 
   constructor(props) {
     super(props);
@@ -29,11 +29,11 @@ export default class PageSpeedInsights extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     let url = this._getApiUrl(this.props.url);
 
     this._makeRequest(url);
-  };
+  }
 
   _getApiUrl(url) {
     const query = [
@@ -46,14 +46,12 @@ export default class PageSpeedInsights extends Component {
   _makeRequest(url) {
     let xmlhttp = new XMLHttpRequest();
 
-    let self = this;
-
-    xmlhttp.onreadystatechange = function() {
-      if (xmlhttp.readyState == XMLHttpRequest.DONE) {
-           if (xmlhttp.status == 200) {
-              self._handleResponse(xmlhttp.responseText);
-           };
-        };
+    xmlhttp.onreadystatechange = () => {
+      if (xmlhttp.readyState === xmlhttp.DONE) {
+        if (xmlhttp.status === 200) {
+          this._handleResponse(xmlhttp.responseText);
+       }
+      }
     };
 
     xmlhttp.open('GET', url, true);
@@ -89,6 +87,6 @@ export default class PageSpeedInsights extends Component {
           <img src={this._getImageSrc(this.state.score)} />
         </Loader>
       </div>
-    );    
+    );
   }
-};
+}
