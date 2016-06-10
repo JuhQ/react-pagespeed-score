@@ -3,9 +3,31 @@
 const path = require('path');
 
 module.exports = {
+  entry: './demo/src/index',
+
+  devtool: 'source-map',
+
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'index.js',
-    publicPath: '/demo/dist'
-  }
+    filename: 'bundle.js',
+    publicPath: path.join(__dirname, 'demo', 'src')
+  },
+
+  module: {
+    loaders: [
+      { 
+        test: /(\.jsx|\.js)$/,
+        loader: 'babel',
+        query: {
+          presets: ['react', 'es2015', 'stage-0']
+        },
+        exclude: /(node_modules|bower_components)/,
+      }
+    ]
+  },
+
+  resolve: {
+    root: path.resolve('./src'),
+    extensions: ['', '.js', '.jsx']
+  },
 };
