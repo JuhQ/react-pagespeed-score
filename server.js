@@ -2,7 +2,7 @@
 
 const webpack = require('webpack');
 const webpackDevServer = require('webpack-dev-server');
-const ou = require('openurl');
+const openUrl = require('openurl');
 
 let config = require('./webpack.dev.config');
 
@@ -19,5 +19,5 @@ new webpackDevServer(webpack(config), {
 
   console.log('Ready at ' + url);
   
-  return ou.open(url);
+  return openUrl.open(url);
 });
