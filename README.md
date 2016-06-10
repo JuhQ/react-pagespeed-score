@@ -1,12 +1,8 @@
 <img src="./screenshot.png?raw=true" width="350" />
 
-# React PageSpeed Score
+# React PageSpeed Score [![Build Status](https://travis-ci.org/cauealves/react-pagespeed-score.svg?branch=master)](https://travis-ci.org/cauealves/react-pagespeed-score) [![Dependency Status](https://david-dm.org/cauealves/react-pagespeed-score.svg?style=flat-square)](https://david-dm.org/cauealves/react-pagespeed-score) [![Npm Package Version](https://img.shields.io/npm/v/react-pagespeed-score.svg?style=flat-square)](https://www.npmjs.org/package/react-pagespeed-score)
 
 > A React component for display a dial-type chart of PageSpeed Insights.
-
-[![Build Status](https://travis-ci.org/cauealves/react-pagespeed-score.svg?branch=master)](https://travis-ci.org/cauealves/react-pagespeed-score)
-[![Dependency Status](https://david-dm.org/cauealves/react-pagespeed-score.svg?style=flat-square)](https://david-dm.org/cauealves/react-pagespeed-score)
-[![Npm Package Version](https://img.shields.io/npm/v/react-pagespeed-score.svg?style=flat-square)](https://www.npmjs.org/package/react-pagespeed-score)
 
 <br />
 
