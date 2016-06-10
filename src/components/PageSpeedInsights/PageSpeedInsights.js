@@ -23,11 +23,11 @@ export default class PageSpeedInsights extends Component {
     super(props);
 
     this.state = {
-      score: 0
+      score: false
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     let url = this._getApiUrl(this.props.url);
 
     this._makeRequest(url);
@@ -66,9 +66,28 @@ export default class PageSpeedInsights extends Component {
     });
   }
 
+  _getImageSrc () {
+    const query = [
+      'chtt=Page+Speed+score:+' + this.state.score,
+      'chs=300x200',
+      'cht=gom',
+      'chd=t:' + this.state.score,
+      'chxt=x,y',
+      'chxl=0:|' + this.state.score,
+    ].join('&');
+
+    return CHART_API_URL + query;
+  }
+
   render() {
+    if (false === this.state.score) {
+      return <div>Loading...</div>;
+    };
+
     return (
-      <div>{this.state.score}</div>
-    )
+      <div className="chart">
+        <img src={this._getImageSrc(this.state.score)} />
+      </div>
+    );    
   }
 };
