@@ -76,7 +76,7 @@ export default class PageSpeedInsights extends Component {
       'cht=gom',
       'chd=t:' + this.state.score,
       'chxt=x,y',
-      'chxl=0:|' + this.state.score + '|1:|improve it|gives pro spent|fast'
+      'chxl=0:|' + this.state.score + '|1:|improve it|gives pro spent|nice job'
     ].join('&');
 
     return CHART_API_URL + query;
