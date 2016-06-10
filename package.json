@@ -1,6 +1,6 @@
 {
   "name": "react-pagespeed-score",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A React component for display a dial-type chart of PageSpeed Insights.",
   "main": "src/index.js",
   "scripts": {
@@ -17,6 +17,13 @@
     "email": "cauealveseng@gmail.com",
     "url": "cauealves.com"
   },
+  "keywords": [
+    "react",
+    "react-component",
+    "pagespeed",
+    "google",
+    "react-pagespeed"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cauealves/react-pagespeed-score/issues"
