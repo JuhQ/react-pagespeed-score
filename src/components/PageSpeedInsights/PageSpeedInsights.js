@@ -13,11 +13,13 @@ import Loader from 'react-loader';
 export default class PageSpeedInsights extends Component {
 
   static propTypes = {
-    url: PropTypes.string.isRequired
+    url: PropTypes.string.isRequired,
+    labels: PropTypes.string
   }
 
   static defaultProps = {
-    url: location.origin
+    url: location.origin,
+    labels: 'improve it | gives pro spent | nice job'
   }
 
   constructor(props) {
@@ -74,7 +76,7 @@ export default class PageSpeedInsights extends Component {
       'cht=gom',
       'chd=t:' + this.state.score,
       'chxt=x,y',
-      'chxl=0:|' + this.state.score + '|1:|improve it|gives pro spent|nice job'
+      'chxl=0:|' + this.state.score + '|1:|' + this.props.labels
     ].join('&');
 
     return CHART_API_URL + query;
