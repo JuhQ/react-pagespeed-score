@@ -33,7 +33,7 @@ class BasicUsage extends React.Component {
 Attribute  | Type        | Default             | Description
 ---        | ---         | ---                 | ---
 `url`   | *String*    | `location.origin`    | The url that will be tested in Pagespeed Insights
-`labels` | *String*   | `improve it | gives pro spent | nice job`             | Specify the labels of chart
+`labels` | *String*   | `improve it \| gives pro spent \| nice job`             | Specify the labels of chart
 
 
 ## Development
